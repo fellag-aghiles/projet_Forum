@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des personnes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h1>Gestion des personnes</h1></header>
+
+<video autoplay muted loop playsinline class="background-video">
+    <source src="back.mp4" type="video/mp4">
+    Ton navigateur ne supporte pas la vidéo HTML5.
+</video>
+
+<div class="container">
+    <div class="card">
+        <div class="card-title">Rechercher par pseudo</div>
+        <div class="form-group">
+            <label>Pseudo:</label>
+            <input id="search-pseudo" type="text">
+            <button class="btn btn-primary" onclick="searchPerson()">Rechercher</button>
+        </div>
+        <div class="table-container" id="tableContainer2"></div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Ajouter une personne</div>
+        <div class="hidden" id="cardAjout">
+            <div class="form-group"><label>Pseudo:</label><input id="new-pseudo" type="text"></div>
+            <div class="form-group"><label>Prénom:</label><input id="new-prenom" type="text"></div>
+            <div class="form-group"><label>Nom:</label><input id="new-nom" type="text"></div>
+            <div class="form-group"><label>Âge:</label><input id="new-age" type="number"></div>
+            <div class="form-group"><label>Ville:</label><input id="new-ville" type="text"></div>
+            <button class="btn btn-success" id="ajout">Ajouter</button>
+            <button class="btn" id="annuler">Annuler</button>
+        </div>
+        <button class="btn btn-primary" id="showajoute">Afficher</button>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Afficher toutes les personnes</div>
+        <button class="btn btn-primary" id="affichecacher">Afficher</button>
+        <div class="table-container" id="tableContainer"></div>
+    </div>
+</div>
+
+<div id="notification" class="notification"></div>
+<script src="script.js"></script>
+</body>
+</html>
